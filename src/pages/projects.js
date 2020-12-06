@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
-import "../stylesheets/pageLayout.css";
+import "../stylesheets/photography.css";
 import "../stylesheets/text.css";
 
 const Projects = () => {

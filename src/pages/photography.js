@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "react-bootstrap/Image";
 import Layout from "../components/Layout";
-import "../stylesheets/pageLayout.css";
+import "../stylesheets/photography.css";
 import "../stylesheets/text.css";
 
 const AIRTABLE_API_KEY = process.env.REACT_APP_AIRTABLE_API_KEY;
@@ -48,7 +48,6 @@ const Photography = () => {
     const getRecords = async () => {
       let canceled = false;
       const records = await getPhotosInAlbum(album);
-      console.log(records);
       if (!canceled) {
         setPhotos(records);
       }
@@ -58,6 +57,13 @@ const Photography = () => {
     };
     getRecords();
   }, [album]);
+
+  React.useEffect(() => {
+    document.body.className = "pageBody";
+    return () => {
+      document.body.className = "";
+    };
+  });
 
   return (
     <Layout>

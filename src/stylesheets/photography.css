@@ -1,6 +1,6 @@
-html,
-body {
+.pageBody {
   height: 100%;
+  overflow: hidden;
 }
 
 .pageLayout-container {
