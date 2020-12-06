@@ -4,10 +4,11 @@ import Layout from "../components/Layout";
 import "../stylesheets/pageLayout.css";
 import "../stylesheets/text.css";
 
+const AIRTABLE_API_KEY = process.env.REACT_APP_AIRTABLE_API_KEY;
+const AIRTABLE_BASE_KEY = process.env.REACT_APP_AIRTABLE_BASE_KEY;
+
 var Airtable = require("airtable");
-var base = new Airtable({ apiKey: "keyqImwErlYOVbnFz" }).base(
-  "app4Rk1m18hcBC6Ge"
-);
+var base = new Airtable({ apiKey: AIRTABLE_API_KEY }).base(AIRTABLE_BASE_KEY);
 
 const getPhotosInAlbum = async (albumName) => {
   return base("Photos")
@@ -67,17 +68,27 @@ const Photography = () => {
             Here are some photos from photoshoots I went on with friends around
             the Bay Area!
           </p>
-          <div>
-            <div onClick={() => setAlbum("SFAI")}>SFAI</div>
-            <div onClick={() => setAlbum("Apartyment")}>Apartyment</div>
+          <div className="links">
+            <div className="link" onClick={() => setAlbum("SFAI")}>
+              SFAI
+            </div>
+            <div className="link" onClick={() => setAlbum("Apartyment")}>
+              Apartyment
+            </div>
           </div>
         </div>
         <div className="right">
-          {photos.map((photo) => {
-            console.log(getDescription(photo));
-            console.log(getImage(photo));
-            return <Image className="img" src={getImage(photo)} />;
-          })}
+          <div className="photos">
+            {photos.map((photo) => {
+              return (
+                <div className="image">
+                  <Image className="img" src={getImage(photo)} />
+                  <p className="caption">{getDescription(photo)}</p>
+                </div>
+              );
+            })}
+          </div>
+          <div style={{ height: 200 }}></div>
         </div>
       </div>
     </Layout>
