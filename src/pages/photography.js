@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "react-bootstrap/Image";
+import { Tab } from "../components/helpers";
 import Layout from "../components/Layout";
+import "../stylesheets/page.css";
 import "../stylesheets/photography.css";
 import "../stylesheets/text.css";
 
@@ -9,6 +11,25 @@ const AIRTABLE_BASE_KEY = process.env.REACT_APP_AIRTABLE_BASE_KEY;
 
 var Airtable = require("airtable");
 var base = new Airtable({ apiKey: AIRTABLE_API_KEY }).base(AIRTABLE_BASE_KEY);
+
+const defaultAlbum = "SFAI";
+
+const getAlbums = async () => {
+  return base("Albums")
+    .select({
+      view: "Grid view",
+    })
+    .all()
+    .then((records) => {
+      if (!records || records.length < 1) {
+        return [];
+      }
+      return records;
+    })
+    .catch((err) => {
+      throw err;
+    });
+};
 
 const getPhotosInAlbum = async (albumName) => {
   return base("Photos")
@@ -36,16 +57,31 @@ const getImage = (record) => {
   return record.fields["Attachments"][0].url;
 };
 
-const getKey = (record) => {
-  return record.get("id");
-};
-
 const Photography = () => {
-  const [album, setAlbum] = React.useState("SFAI");
+  const [album, setAlbum] = React.useState(defaultAlbum);
+  const [allAlbums, setAllAlbums] = React.useState({});
   const [photos, setPhotos] = React.useState([]);
 
   React.useEffect(() => {
-    const getRecords = async () => {
+    const fetchAlbums = async () => {
+      let canceled = false;
+      const albums = await getAlbums();
+      if (!canceled) {
+        const albumNames = {};
+        albums.forEach((album) => {
+          albumNames[album.fields["Name"]] = album.fields["Description"];
+        });
+        setAllAlbums(albumNames);
+      }
+      return () => {
+        canceled = true;
+      };
+    };
+    fetchAlbums();
+  }, []);
+
+  React.useEffect(() => {
+    const fetchRecords = async () => {
       let canceled = false;
       const records = await getPhotosInAlbum(album);
       if (!canceled) {
@@ -55,11 +91,11 @@ const Photography = () => {
         canceled = true;
       };
     };
-    getRecords();
+    fetchRecords();
   }, [album]);
 
   React.useEffect(() => {
-    document.body.className = "pageBody";
+    document.body.className = "Page-body";
     return () => {
       document.body.className = "";
     };
@@ -67,34 +103,33 @@ const Photography = () => {
 
   return (
     <Layout>
-      <div className="pageLayout-container">
-        <div className="left">
+      <div className="Page-container">
+        <div className="Page-left">
           <p className="header">Photography</p>
-          <p className="subtitle">
-            Here are some photos from photoshoots I went on with friends around
-            the Bay Area!
-          </p>
-          <div className="links">
-            <div className="link" onClick={() => setAlbum("SFAI")}>
-              SFAI
-            </div>
-            <div className="link" onClick={() => setAlbum("Apartyment")}>
-              Apartyment
-            </div>
+          <div className="Page-descriptionContainer">
+            <p className="caption">{allAlbums[album]}</p>
+          </div>
+          <div className="Page-tabContainer">
+            {Object.keys(allAlbums).map((album) => {
+              return <Tab albumName={album} onClick={() => setAlbum(album)} />;
+            })}
           </div>
         </div>
-        <div className="right">
-          <div className="photos">
+        <div className="Page-right">
+          <div className="Page-rightContent">
             {photos.map((photo) => {
+              const imgUrl = getImage(photo);
               return (
-                <div className="image">
-                  <Image className="img" src={getImage(photo)} />
+                <div className="Photo-images">
+                  <a href={imgUrl} target="_blank" rel="noreferrer">
+                    <Image className="Photo-image" src={imgUrl} />
+                  </a>
                   <p className="caption">{getDescription(photo)}</p>
                 </div>
               );
             })}
           </div>
-          <div style={{ height: 200 }}></div>
+          <div style={{ height: 250 }}></div>
         </div>
       </div>
     </Layout>

@@ -1,8 +1,17 @@
 .header {
   font-weight: bold;
-  font-size: 4vw;
+  font-size: clamp(16px, 4vw, 36px);
+  color: #1b1e2e;
 }
 
-.subtitle {
-  font-size: 2vw;
+.body {
+  font-size: clamp(12px, 1.5vw, 18px);
+  line-height: 1.4;
+  color: #1b1e2e;
+}
+
+.caption {
+  font-size: 12px;
+  line-height: 1.4;
+  color: #1b1e2e;
 }

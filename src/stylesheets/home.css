@@ -1,17 +1,4 @@
-.heading {
-  display: flex;
-  flex-direction: row;
-  padding: 24px;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.pageContent {
-  display: flex;
-  align-items: center;
-}
-
-.container {
+.Home-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -21,28 +8,20 @@
   padding: 36px 0px;
 }
 
-.logo {
-  height: 100px;
-}
-
-.thu {
+.Home-thu {
   flex: 0 0 50%;
 }
-.thu img {
+.Home-thu img {
   display: block;
   height: 400px;
   margin: 0 auto;
 }
 
-.rightContainer {
+.Home-rightContainer {
   flex: 0 0 50%;
 }
 
-.intro {
+.Home-rightContainer img {
   height: 200px;
   width: auto;
-}
-
-.text {
-  line-height: 1.4;
 }

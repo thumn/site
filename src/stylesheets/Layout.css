@@ -1,0 +1,11 @@
+.Layout-logo {
+  height: 100px;
+}
+
+.Layout-heading {
+  display: flex;
+  flex-direction: row;
+  padding: 24px;
+  justify-content: space-between;
+  align-items: center;
+}
