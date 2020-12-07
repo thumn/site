@@ -16,6 +16,3 @@ function App() {
 }
 
 export default App;
-
-// 326265690765-tfr5sorhjli6tf2m96ka0ggi5pijebsq.apps.googleusercontent.com
-// y1t0TQ5yBDTvUWdZN2iutcrI
