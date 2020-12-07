@@ -20,8 +20,7 @@ const Home = () => {
               a minor in Computer Science in December 2019. I'm currently
               working as a software engineer at Samsara. In my free time, I
               enjoy playing Animal Crossing, writing snail mail to friends,
-              going on photoshoots with friends, and doing Chloe Ting workout
-              challenges!
+              going on photoshoots, and doing Chloe Ting workout challenges!
             </p>
           </div>
         </div>
