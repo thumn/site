@@ -10,7 +10,7 @@
     "airtable": "^0.10.1",
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
-    "highlight.js": "^8.9.1",
+    "highlight.js": ">=9.18.2",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",
