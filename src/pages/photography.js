@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "react-bootstrap/Image";
 import ReactLoading from "react-loading";
 import { Tab } from "../components/helpers";
 import Layout from "../components/Layout";
@@ -130,10 +129,11 @@ const Photography = () => {
             <div className="Page-rightContent">
               {photos.map((photo) => {
                 const imgUrl = getImage(photo);
+                const desc = getDescription(photo);
                 return (
                   <div className="Photo-images">
                     <a href={imgUrl} target="_blank" rel="noreferrer">
-                      <Image className="Photo-image" src={imgUrl} />
+                      <img className="Photo-image" src={imgUrl} alt={desc} />
                     </a>
                     <p className="caption">{getDescription(photo)}</p>
                   </div>
