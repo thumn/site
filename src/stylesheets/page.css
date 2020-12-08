@@ -3,6 +3,21 @@
   overflow: hidden;
 }
 
+.Page-loaderContainer {
+  display: flex;
+  flex: 4;
+  background-image: linear-gradient(white, #f6f3e4);
+}
+
+.Page-loader {
+  display: flex;
+  flex: 4;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+
 .Page-container {
   display: flex;
   flex-direction: row;

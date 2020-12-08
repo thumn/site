@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "react-bootstrap/Image";
+import ReactLoading from "react-loading";
 import { Tab } from "../components/helpers";
 import Layout from "../components/Layout";
 import "../stylesheets/page.css";
@@ -61,6 +62,7 @@ const Photography = () => {
   const [album, setAlbum] = React.useState(defaultAlbum);
   const [allAlbums, setAllAlbums] = React.useState({});
   const [photos, setPhotos] = React.useState([]);
+  const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
     const fetchAlbums = async () => {
@@ -83,9 +85,11 @@ const Photography = () => {
   React.useEffect(() => {
     const fetchRecords = async () => {
       let canceled = false;
+      setLoading(true);
       const records = await getPhotosInAlbum(album);
       if (!canceled) {
         setPhotos(records);
+        setLoading(false);
       }
       return () => {
         canceled = true;
@@ -115,22 +119,30 @@ const Photography = () => {
             })}
           </div>
         </div>
-        <div className="Page-right">
-          <div className="Page-rightContent">
-            {photos.map((photo) => {
-              const imgUrl = getImage(photo);
-              return (
-                <div className="Photo-images">
-                  <a href={imgUrl} target="_blank" rel="noreferrer">
-                    <Image className="Photo-image" src={imgUrl} />
-                  </a>
-                  <p className="caption">{getDescription(photo)}</p>
-                </div>
-              );
-            })}
+        {loading ? (
+          <div className="Page-loaderContainer">
+            <div className="Page-loader">
+              <ReactLoading type={"spin"} height={"20%"} color={"#ff5757"} />
+            </div>
           </div>
-          <div style={{ height: 250 }}></div>
-        </div>
+        ) : (
+          <div className="Page-right">
+            <div className="Page-rightContent">
+              {photos.map((photo) => {
+                const imgUrl = getImage(photo);
+                return (
+                  <div className="Photo-images">
+                    <a href={imgUrl} target="_blank" rel="noreferrer">
+                      <Image className="Photo-image" src={imgUrl} />
+                    </a>
+                    <p className="caption">{getDescription(photo)}</p>
+                  </div>
+                );
+              })}
+            </div>
+            <div style={{ height: 250 }}></div>
+          </div>
+        )}
       </div>
     </Layout>
   );
