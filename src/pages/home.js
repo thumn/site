@@ -1,4 +1,5 @@
 import React from "react";
+import Contact from "../components/contact";
 import Layout from "../components/Layout";
 import intro from "../img/intro.png";
 import thu from "../img/thu-cartoon.jpg";
@@ -7,7 +8,7 @@ import "../stylesheets/text.css";
 
 const Home = () => {
   return (
-    <div>
+    <div className="Home-pageContainer">
       <Layout>
         <div className="Home-container">
           <div className="Home-thu">
@@ -25,6 +26,7 @@ const Home = () => {
           </div>
         </div>
       </Layout>
+      <Contact />
     </div>
   );
 };
