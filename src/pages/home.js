@@ -12,7 +12,7 @@ const Home = () => {
       <Layout>
         <div className="Home-container">
           <div className="Home-thu">
-            <img src={thu} alt="" />
+            <img src={thu} alt="" title="art by @soresoar" />
           </div>
           <div className="Home-rightContainer">
             <img src={intro} alt="" />
