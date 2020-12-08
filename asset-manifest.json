@@ -1,26 +1,30 @@
 {
   "files": {
-    "main.css": "/site/static/css/main.81825207.chunk.css",
-    "main.js": "/site/static/js/main.bf7f8d0a.chunk.js",
-    "main.js.map": "/site/static/js/main.bf7f8d0a.chunk.js.map",
-    "runtime-main.js": "/site/static/js/runtime-main.0c3e2dce.js",
-    "runtime-main.js.map": "/site/static/js/runtime-main.0c3e2dce.js.map",
-    "static/js/2.2221cdb0.chunk.js": "/site/static/js/2.2221cdb0.chunk.js",
-    "static/js/2.2221cdb0.chunk.js.map": "/site/static/js/2.2221cdb0.chunk.js.map",
-    "static/js/3.6275ae8a.chunk.js": "/site/static/js/3.6275ae8a.chunk.js",
-    "static/js/3.6275ae8a.chunk.js.map": "/site/static/js/3.6275ae8a.chunk.js.map",
+    "main.css": "/site/static/css/main.a5de4801.chunk.css",
+    "main.js": "/site/static/js/main.2565d963.chunk.js",
+    "main.js.map": "/site/static/js/main.2565d963.chunk.js.map",
+    "runtime-main.js": "/site/static/js/runtime-main.5650122d.js",
+    "runtime-main.js.map": "/site/static/js/runtime-main.5650122d.js.map",
+    "static/js/2.29d846ed.chunk.js": "/site/static/js/2.29d846ed.chunk.js",
+    "static/js/2.29d846ed.chunk.js.map": "/site/static/js/2.29d846ed.chunk.js.map",
+    "static/js/3.0a97a683.chunk.js": "/site/static/js/3.0a97a683.chunk.js",
+    "static/js/3.0a97a683.chunk.js.map": "/site/static/js/3.0a97a683.chunk.js.map",
     "index.html": "/site/index.html",
-    "static/css/main.81825207.chunk.css.map": "/site/static/css/main.81825207.chunk.css.map",
-    "static/js/2.2221cdb0.chunk.js.LICENSE.txt": "/site/static/js/2.2221cdb0.chunk.js.LICENSE.txt",
+    "static/css/main.a5de4801.chunk.css.map": "/site/static/css/main.a5de4801.chunk.css.map",
+    "static/js/2.29d846ed.chunk.js.LICENSE.txt": "/site/static/js/2.29d846ed.chunk.js.LICENSE.txt",
     "static/media/Thu_Nguyen_Resume.fbaf3eee.pdf": "/site/static/media/Thu_Nguyen_Resume.fbaf3eee.pdf",
+    "static/media/email.0e360d89.svg": "/site/static/media/email.0e360d89.svg",
+    "static/media/github.16a9304e.svg": "/site/static/media/github.16a9304e.svg",
     "static/media/intro.38f4bc95.png": "/site/static/media/intro.38f4bc95.png",
+    "static/media/linkedin.03f1d164.svg": "/site/static/media/linkedin.03f1d164.svg",
     "static/media/thu-cartoon.2c8f0a2b.jpg": "/site/static/media/thu-cartoon.2c8f0a2b.jpg",
-    "static/media/tn-logo.306dc8df.png": "/site/static/media/tn-logo.306dc8df.png"
+    "static/media/tn-logo.306dc8df.png": "/site/static/media/tn-logo.306dc8df.png",
+    "static/media/twitter.e7886f46.svg": "/site/static/media/twitter.e7886f46.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.0c3e2dce.js",
-    "static/js/2.2221cdb0.chunk.js",
-    "static/css/main.81825207.chunk.css",
-    "static/js/main.bf7f8d0a.chunk.js"
+    "static/js/runtime-main.5650122d.js",
+    "static/js/2.29d846ed.chunk.js",
+    "static/css/main.a5de4801.chunk.css",
+    "static/js/main.2565d963.chunk.js"
   ]
 }
