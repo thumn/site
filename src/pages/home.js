@@ -8,7 +8,7 @@ import "../stylesheets/text.css";
 
 const Home = () => {
   return (
-    <div className="Home-pageContainer">
+    <div>
       <Layout>
         <div className="Home-container">
           <div className="Home-thu">
@@ -24,9 +24,9 @@ const Home = () => {
               going on photoshoots, and doing Chloe Ting workout challenges!
             </p>
           </div>
+          <Contact />
         </div>
       </Layout>
-      <Contact />
     </div>
   );
 };
