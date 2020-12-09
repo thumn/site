@@ -13,7 +13,6 @@
 .ProjectCard-image {
   display: flex;
   justify-content: center;
-  flex: 3;
 }
 
 .ProjectCard-postImageContent {
@@ -24,7 +23,9 @@
 }
 
 .ProjectCard-img {
+  max-height: 400px;
   max-width: 100%;
+  object-fit: cover;
 }
 
 .ProjectCard-description {
