@@ -13,9 +13,7 @@
 .ProjectCard-image {
   display: block;
   overflow: auto;
-  /* justify-content: center; */
   margin: 0 auto;
-  background-color: orange;
 }
 
 .ProjectCard-postImageContent {
@@ -23,7 +21,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: purple;
 }
 
 @media only screen and (max-width: 400px) {
