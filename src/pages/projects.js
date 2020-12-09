@@ -1,4 +1,5 @@
 import React from "react";
+import ReactLoading from "react-loading";
 import Layout from "../components/Layout";
 import ProjectCard from "../components/ProjectCard";
 import "../stylesheets/page.css";
@@ -50,14 +51,16 @@ const getLink = (record) => {
 
 const Projects = () => {
   const [projects, setProjects] = React.useState([]);
+  const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
     const fetchProjects = async () => {
       let canceled = false;
+      setLoading(true);
       const projects = await getProjects();
       if (!canceled) {
-        console.log(projects);
         setProjects(projects);
+        setLoading(false);
       }
       return () => {
         canceled = true;
@@ -83,29 +86,37 @@ const Projects = () => {
             idk
           </p>
         </div>
-        <div className="Page-right">
-          <div className="Page-rightContent">
-            <div className="Projects-projectCards">
-              {projects.map((project) => {
-                const name = getName(project);
-                const desc = getDescription(project);
-                const imgUrl = getImage(project);
-                const tags = getTags(project);
-                const github = getLink(project);
-                return (
-                  <ProjectCard
-                    name={name}
-                    desc={desc}
-                    imgUrl={imgUrl}
-                    tags={tags}
-                    github={github}
-                  />
-                );
-              })}
+        {loading ? (
+          <div className="Page-loaderContainer">
+            <div className="Page-loader">
+              <ReactLoading type={"spin"} height={"20%"} color={"#E6DBB3"} />
             </div>
           </div>
-          <div style={{ height: 250 }}></div>
-        </div>
+        ) : (
+          <div className="Page-right">
+            <div className="Page-rightContent">
+              <div className="Projects-projectCards">
+                {projects.map((project) => {
+                  const name = getName(project);
+                  const desc = getDescription(project);
+                  const imgUrl = getImage(project);
+                  const tags = getTags(project);
+                  const github = getLink(project);
+                  return (
+                    <ProjectCard
+                      name={name}
+                      desc={desc}
+                      imgUrl={imgUrl}
+                      tags={tags}
+                      github={github}
+                    />
+                  );
+                })}
+              </div>
+            </div>
+            <div style={{ height: 250 }}></div>
+          </div>
+        )}
       </div>
     </Layout>
   );
