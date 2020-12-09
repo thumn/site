@@ -14,6 +14,7 @@
   display: flex;
   justify-content: center;
   height: auto;
+  background-color: green;
 }
 
 .ProjectCard-postImageContent {
@@ -21,6 +22,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: blue;
 }
 
 .ProjectCard-img {
@@ -38,7 +40,6 @@
 }
 
 .ProjectCard-description {
-  flex: 2;
   margin-bottom: 5px;
 }
 
