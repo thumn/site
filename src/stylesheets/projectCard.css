@@ -13,6 +13,7 @@
 .ProjectCard-image {
   display: flex;
   justify-content: center;
+  height: auto;
 }
 
 .ProjectCard-postImageContent {
