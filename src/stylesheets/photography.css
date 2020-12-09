@@ -6,4 +6,10 @@
 .Photo-image {
   max-width: 80%;
   object-fit: contain;
+  box-shadow: 0;
+  transition: box-shadow 1s;
+}
+
+.Photo-image:hover {
+  box-shadow: 0 0 7px #515151;
 }
