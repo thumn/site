@@ -6,7 +6,8 @@
   margin: 24px;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 0 7px #515151;
+  background-color: white;
+  padding: 20px;
 }
 
 .ProjectCard-image {
