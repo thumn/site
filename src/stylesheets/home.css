@@ -1,3 +1,10 @@
+.Home-pageContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
 .Home-container {
   display: flex;
   flex-direction: row;

@@ -7,7 +7,7 @@ import "../stylesheets/contact.css";
 
 const Contact = () => {
   return (
-    <div className="Contact-container">
+    <div>
       <ul id="contact">
         <li>
           <a
