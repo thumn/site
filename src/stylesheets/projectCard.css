@@ -1,0 +1,46 @@
+.ProjectCard-container {
+  height: auto;
+  max-width: 60%;
+  border-radius: 5px;
+  display: flex;
+  margin: 24px;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0 7px #515151;
+}
+
+.ProjectCard-image {
+  display: flex;
+  justify-content: center;
+  flex: 3;
+}
+
+.ProjectCard-postImageContent {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ProjectCard-img {
+  max-width: 100%;
+}
+
+.ProjectCard-description {
+  flex: 2;
+  margin-bottom: 5px;
+}
+
+.ProjectCard-tags {
+  margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.ProjectCard-nameAndLink {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import Contact from "../components/contact";
+import Contact from "../components/Contact";
 import Layout from "../components/Layout";
 import intro from "../img/intro.png";
 import thu from "../img/thu-cartoon.jpg";

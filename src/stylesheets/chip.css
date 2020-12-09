@@ -1,0 +1,13 @@
+.Chip {
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 0px 10px;
+  text-align: center;
+  margin: 3px;
+}
+
+/* .Chip + .Chip {
+  margin: 0px 10px;
+} */

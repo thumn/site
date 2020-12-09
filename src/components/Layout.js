@@ -1,6 +1,6 @@
 import logo from "../img/tn-logo.png";
 import "../stylesheets/Layout.css";
-import Navbar from "./navbar";
+import Navbar from "./Navbar";
 
 const Layout = ({ children }) => {
   return (

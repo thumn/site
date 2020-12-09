@@ -1,0 +1,11 @@
+.Projects-projectCardContainer {
+  text-align: center;
+}
+
+.Projects-projectCards {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}

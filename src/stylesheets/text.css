@@ -1,17 +1,33 @@
 .header {
   font-weight: bold;
   font-size: clamp(16px, 4vw, 36px);
-  color: #1b1e2e;
+  color: var(--black);
+}
+
+.header2 {
+  font-weight: bold;
+  font-size: clamp(16px, 4vw, 24px);
+  color: var(--black);
 }
 
 .body {
   font-size: clamp(12px, 1.5vw, 18px);
   line-height: 1.4;
-  color: #1b1e2e;
+  color: var(--black);
+}
+
+.chipBody {
+  font-size: clamp(8px, 1.5vw, 18px);
+  line-height: 1.4;
+  color: var(--black);
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .caption {
   font-size: 12px;
   line-height: 1.4;
-  color: #1b1e2e;
+  color: var(--black);
 }
