@@ -1,3 +1,10 @@
+:root {
+  --red: #ff5757;
+  --cream: #f6f3e4;
+  --champagne: #f0ebd1;
+  --white: #faf8f0;
+}
+
 .Page-body {
   height: 100%;
   overflow: hidden;
@@ -6,7 +13,7 @@
 .Page-loaderContainer {
   display: flex;
   flex: 4;
-  background-image: linear-gradient(white, #f6f3e4);
+  background-image: linear-gradient(white, var(--cream));
 }
 
 .Page-loader {
@@ -42,7 +49,7 @@
 
 .Page-right {
   flex: 4;
-  background-image: linear-gradient(white, #f6f3e4);
+  background-image: linear-gradient(white, var(--cream));
   height: 100vh;
   align-items: center;
   overflow-y: auto;
@@ -69,6 +76,9 @@
   padding: 4px 10px;
   max-height: 100px;
 }
+
+/* Animated Tab Buttons */
+/* Source: Thar Buttons from https://codepen.io/sazzad/pen/yNNNJG */
 
 .animatedButton:link,
 .animatedButton:visited {
@@ -131,7 +141,30 @@
   z-index: -1;
   content: "";
   color: #000 !important;
-  background: #f6f3e4;
+  background: var(--cream);
   border-radius: 20px;
   transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+}
+
+/* Scrollbar */
+/* Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--white);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--champagne);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

@@ -121,7 +121,7 @@ const Photography = () => {
         {loading ? (
           <div className="Page-loaderContainer">
             <div className="Page-loader">
-              <ReactLoading type={"spin"} height={"20%"} color={"#ff5757"} />
+              <ReactLoading type={"spin"} height={"20%"} color={"#E6DBB3"} />
             </div>
           </div>
         ) : (
