@@ -23,9 +23,17 @@
 }
 
 .ProjectCard-img {
-  max-height: auto;
+  max-height: 400px;
   max-width: 100%;
-  object-fit: cover;
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 400px) {
+  .ProjectCard-img {
+    max-height: 100px;
+    max-width: 100%;
+    object-fit: contain;
+  }
 }
 
 .ProjectCard-description {
