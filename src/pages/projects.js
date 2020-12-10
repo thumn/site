@@ -1,5 +1,6 @@
 import React from "react";
 import ReactLoading from "react-loading";
+import Chip, { ProjectTypes } from "../components/Chip";
 import Layout from "../components/Layout";
 import ProjectCard from "../components/ProjectCard";
 import "../stylesheets/page.css";
@@ -62,8 +63,15 @@ const getGithub = (record) => {
 };
 
 const Projects = () => {
+  const [allProjects, setAllProjects] = React.useState([]);
   const [projects, setProjects] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
+
+  const filterProjects = (projectType) => {
+    setProjects(
+      allProjects.filter((project) => getTags(project).includes(projectType))
+    );
+  };
 
   React.useEffect(() => {
     const fetchProjects = async () => {
@@ -72,6 +80,7 @@ const Projects = () => {
       const projects = await getProjects();
       if (!canceled) {
         setProjects(projects);
+        setAllProjects(projects);
         setLoading(false);
       }
       return () => {
@@ -94,9 +103,25 @@ const Projects = () => {
         <div className="Page-left">
           <p className="header">Projects</p>
           <p className="body">
-            Here are some projects. haha. probs gonna include some filters here
-            idk
+            Here are some projects I've worked on in my student orgs and
+            hackathons!
           </p>
+          <div>
+            <Chip
+              color={"#BC8DA0"}
+              label={"all"}
+              onClick={() => setProjects(allProjects)}
+            />
+            {Object.keys(ProjectTypes).map((type) => {
+              return (
+                <Chip
+                  color={ProjectTypes[type]}
+                  label={type}
+                  onClick={() => filterProjects(type)}
+                />
+              );
+            })}
+          </div>
         </div>
         {loading ? (
           <div className="Page-loaderContainer">

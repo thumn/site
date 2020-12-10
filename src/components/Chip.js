@@ -1,6 +1,6 @@
 import "../stylesheets/chip.css";
 
-const ProjectTypes = {
+export const ProjectTypes = {
   react: "#A2C7E5",
   reactnative: "#87B6A7",
   python: "#E3F09B",
@@ -8,11 +8,19 @@ const ProjectTypes = {
   rubyonrails: "#F79F79",
 };
 
-const Chip = ({ label }) => {
+const Chip = ({ label, color, onClick }) => {
+  const chipColor = color || ProjectTypes[label];
+  const chipStyle = { backgroundColor: chipColor };
+
+  if (onClick) {
+    chipStyle["cursor"] = "pointer";
+  }
+
   return (
     <div
       className="Chip chipBody bold"
-      style={{ backgroundColor: ProjectTypes[label] }}
+      style={chipStyle}
+      onClick={() => onClick()}
     >
       {label}
     </div>
