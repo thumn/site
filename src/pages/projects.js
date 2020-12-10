@@ -103,7 +103,7 @@ const Projects = () => {
         <div className="Page-left">
           <p className="header">Projects</p>
           <p className="body">
-            Here are some projects I've worked on in my student orgs and
+            Here are some projects I've worked on in my student orgs and at
             hackathons!
           </p>
           <div>
