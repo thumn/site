@@ -21,6 +21,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-width: 900px;
 }
 
 @media only screen and (max-width: 400px) {
@@ -53,4 +54,14 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.ProjectCard-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.ProjectCard-link {
+  margin: 3px;
 }

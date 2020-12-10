@@ -45,7 +45,19 @@ const getTags = (record) => {
   return record.fields["Tags"];
 };
 
+const getOrg = (record) => {
+  return record.fields["Organization"];
+};
+
+const getDate = (record) => {
+  return record.fields["Date"];
+};
+
 const getLink = (record) => {
+  return record.fields["Link"];
+};
+
+const getGithub = (record) => {
   return record.fields["Github"];
 };
 
@@ -101,7 +113,10 @@ const Projects = () => {
                   const desc = getDescription(project);
                   const imgUrl = getImage(project);
                   const tags = getTags(project);
-                  const github = getLink(project);
+                  const github = getGithub(project);
+                  const link = getLink(project);
+                  const org = getOrg(project);
+                  const date = getDate(project);
                   return (
                     <ProjectCard
                       name={name}
@@ -109,6 +124,9 @@ const Projects = () => {
                       imgUrl={imgUrl}
                       tags={tags}
                       github={github}
+                      link={link}
+                      org={org}
+                      date={date}
                     />
                   );
                 })}
