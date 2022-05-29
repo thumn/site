@@ -53,8 +53,7 @@ const Home = () => {
               I graduated from UC Berkeley with a major in Cognitive Science and
               a minor in Computer Science in December 2019. I'm currently
               working as a software engineer at Samsara. In my free time, I
-              enjoy playing Animal Crossing, writing snail mail to friends,
-              going on photoshoots, and doing Chloe Ting workout challenges!
+              enjoy listening to city pop and running!
             </p>
           </div>
         </div>
