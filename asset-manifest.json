@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.5b2811a8.chunk.css",
-    "main.js": "/static/js/main.33769fc2.chunk.js",
-    "main.js.map": "/static/js/main.33769fc2.chunk.js.map",
+    "main.js": "/static/js/main.9d553a0b.chunk.js",
+    "main.js.map": "/static/js/main.9d553a0b.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.447d5317.js",
     "runtime-main.js.map": "/static/js/runtime-main.447d5317.js.map",
     "static/js/2.bfeda02d.chunk.js": "/static/js/2.bfeda02d.chunk.js",
@@ -13,6 +13,7 @@
     "static/css/main.5b2811a8.chunk.css.map": "/static/css/main.5b2811a8.chunk.css.map",
     "static/js/2.bfeda02d.chunk.js.LICENSE.txt": "/static/js/2.bfeda02d.chunk.js.LICENSE.txt",
     "static/media/ThuNguyenResume.c2762390.pdf": "/static/media/ThuNguyenResume.c2762390.pdf",
+    "static/media/ducky.cd7d1134.png": "/static/media/ducky.cd7d1134.png",
     "static/media/email.0e360d89.svg": "/static/media/email.0e360d89.svg",
     "static/media/github.16a9304e.svg": "/static/media/github.16a9304e.svg",
     "static/media/intro.38f4bc95.png": "/static/media/intro.38f4bc95.png",
@@ -26,6 +27,6 @@
     "static/js/runtime-main.447d5317.js",
     "static/js/2.bfeda02d.chunk.js",
     "static/css/main.5b2811a8.chunk.css",
-    "static/js/main.33769fc2.chunk.js"
+    "static/js/main.9d553a0b.chunk.js"
   ]
 }
