@@ -1,7 +1,7 @@
 import Axios from "axios";
 import React, { useEffect, useState } from "react";
 import { io } from "socket.io-client";
-import Contact from "../components/Contact";
+import Contact from "../components/contact";
 import Layout from "../components/Layout";
 import ducky from "../img/ducky.png";
 import intro from "../img/intro.png";
