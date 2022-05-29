@@ -13,6 +13,7 @@
   flex-wrap: wrap;
   margin: 0 auto;
   padding: 36px 0px;
+  z-index: 1;
 }
 
 .Home-thu {
@@ -31,4 +32,21 @@
 .Home-rightContainer img {
   height: 200px;
   width: auto;
+}
+
+.Home-ducky {
+  position: sticky;
+  left: 20px;
+  bottom: 20px;
+  width: fit-content;
+  z-index: 2;
+}
+
+.Home-ducky img {
+  height: 50px;
+  margin: 5px 0px;
+}
+
+.Home-ducky img:hover {
+  cursor: pointer;
 }
