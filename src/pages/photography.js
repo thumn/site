@@ -10,7 +10,12 @@ const AIRTABLE_API_KEY = process.env.REACT_APP_AIRTABLE_API_KEY;
 const AIRTABLE_BASE_KEY = process.env.REACT_APP_AIRTABLE_BASE_KEY;
 
 var Airtable = require("airtable");
-var base = new Airtable({ apiKey: AIRTABLE_API_KEY }).base(AIRTABLE_BASE_KEY);
+
+Airtable.configure({
+  apiKey: AIRTABLE_API_KEY,
+});
+
+var base = Airtable.base(AIRTABLE_BASE_KEY);
 
 const defaultAlbum = "SFAI";
 
