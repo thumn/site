@@ -1,32 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.84425a54.chunk.css",
-    "main.js": "/static/js/main.9d553a0b.chunk.js",
-    "main.js.map": "/static/js/main.9d553a0b.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.447d5317.js",
-    "runtime-main.js.map": "/static/js/runtime-main.447d5317.js.map",
-    "static/js/2.bfeda02d.chunk.js": "/static/js/2.bfeda02d.chunk.js",
-    "static/js/2.bfeda02d.chunk.js.map": "/static/js/2.bfeda02d.chunk.js.map",
-    "static/js/3.0e2adf4d.chunk.js": "/static/js/3.0e2adf4d.chunk.js",
-    "static/js/3.0e2adf4d.chunk.js.map": "/static/js/3.0e2adf4d.chunk.js.map",
+    "main.css": "/static/css/main.d3c6f242.css",
+    "main.js": "/static/js/main.ed4ad04a.js",
+    "static/js/422.c98b9990.chunk.js": "/static/js/422.c98b9990.chunk.js",
+    "static/media/thu-cartoon.jpg": "/static/media/thu-cartoon.2c8f0a2b0b0ef289bf2f.jpg",
+    "static/media/intro.png": "/static/media/intro.38f4bc95499728f9d787.png",
+    "static/media/ThuNguyenResume.pdf": "/static/media/ThuNguyenResume.c2762390bfda7032030e.pdf",
+    "static/media/tn-logo.png": "/static/media/tn-logo.306dc8df9bf7b35aaa8e.png",
     "index.html": "/index.html",
-    "static/css/main.84425a54.chunk.css.map": "/static/css/main.84425a54.chunk.css.map",
-    "static/js/2.bfeda02d.chunk.js.LICENSE.txt": "/static/js/2.bfeda02d.chunk.js.LICENSE.txt",
-    "static/media/ThuNguyenResume.c2762390.pdf": "/static/media/ThuNguyenResume.c2762390.pdf",
-    "static/media/ducky.cd7d1134.png": "/static/media/ducky.cd7d1134.png",
-    "static/media/email.0e360d89.svg": "/static/media/email.0e360d89.svg",
-    "static/media/github.16a9304e.svg": "/static/media/github.16a9304e.svg",
-    "static/media/intro.38f4bc95.png": "/static/media/intro.38f4bc95.png",
-    "static/media/link.5f4e0c2c.svg": "/static/media/link.5f4e0c2c.svg",
-    "static/media/linkedin.03f1d164.svg": "/static/media/linkedin.03f1d164.svg",
-    "static/media/thu-cartoon.2c8f0a2b.jpg": "/static/media/thu-cartoon.2c8f0a2b.jpg",
-    "static/media/tn-logo.306dc8df.png": "/static/media/tn-logo.306dc8df.png",
-    "static/media/twitter.e7886f46.svg": "/static/media/twitter.e7886f46.svg"
+    "static/media/link.svg": "/static/media/link.5f4e0c2ce0de71055d54690c200688b9.svg",
+    "static/media/github.svg": "/static/media/github.16a9304e38fd8167989291ab92544e14.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.03f1d164221e3a81954e6ec24a350288.svg",
+    "static/media/twitter.svg": "/static/media/twitter.e7886f46d2d6e103c9e252143914bcc1.svg",
+    "static/media/email.svg": "/static/media/email.0e360d89f55ba99cc1ef1d224e5829b2.svg",
+    "main.d3c6f242.css.map": "/static/css/main.d3c6f242.css.map",
+    "main.ed4ad04a.js.map": "/static/js/main.ed4ad04a.js.map",
+    "422.c98b9990.chunk.js.map": "/static/js/422.c98b9990.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.447d5317.js",
-    "static/js/2.bfeda02d.chunk.js",
-    "static/css/main.84425a54.chunk.css",
-    "static/js/main.9d553a0b.chunk.js"
+    "static/css/main.d3c6f242.css",
+    "static/js/main.ed4ad04a.js"
   ]
 }
